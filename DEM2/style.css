@@ -1,0 +1,25 @@
+/* CSS counter example for counting from 1 to 10 */
+.counter-list {
+  counter-reset: item;
+  list-style: none;
+  padding: 0;
+}
+
+.counter-list li {
+  counter-increment: item;
+  margin: 0.2rem 0;
+}
+
+.counter-list li::before {
+  content: counter(item) ". ";
+  font-weight: bold;
+}
+
+/* Use this CSS with an HTML list of 10 items */
+/* Example:
+<ul class="counter-list">
+  <li>Item</li>
+  <li>Item</li>
+  ... 10 items total ...
+</ul>
+*/
